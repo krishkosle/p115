@@ -26,7 +26,7 @@ function draw() {
 
     image(video, 0, 0, 300, 300);
 
-    image(clown_nose, noseX, noseY, 30, 30);
+    image(clown_nose, noseX, noseY, 80, 80);
 
 
 }
@@ -41,8 +41,8 @@ function gotPoses(results)
 {
 
     if (results.length > 0)
-        noseX = results[0].pose.nose.x;
-    noseY = results[0].pose.nose.y;
+        noseX = results[0].pose.shoulderLeft.x;
+    noseY = results[0].pose.shoulderLeft.y;
     console.log("nose x =" + noseX);
     console.log("nose y =" + noseY); {
 
